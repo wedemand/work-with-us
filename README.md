@@ -1,2 +1,7 @@
-# work-with-us
-work-with-us repository
+Work at WeDemand!
+=================
+
+Front-end developer
+-------------------
+
+Look at `frontend-developer` directory for instructions.
