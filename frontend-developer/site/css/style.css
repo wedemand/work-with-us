@@ -40,7 +40,7 @@ button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: ba
 button, input { line-height: normal; *overflow: visible; }
 button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
-input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"] { box-sizing: content-box; }
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; }
 input:valid, textarea:valid {  }
@@ -133,7 +133,7 @@ body{
 
 .main--content--wrapper {
     max-width: 890px;
-    margin: 70px auto 0;
+    margin: 70px auto;
 }
 
 .promo--counter--text {
@@ -188,11 +188,157 @@ body{
 }
 
     .promo--ranking--container h2,
-    .promo--lastwinners--container h2 strong { font-weight: 800; }
+    .promo--lastwinners--container h2 strong { font-weight: 800; display: block;}
 
-    .promo--lastwinners--container h2 strong { display: block; }
+.promo--ranking--side-info {
+    float: left;
+    min-height: 180px;
+    position: relative;
+}
+.promo--ranking--container a {
+    background-color: #f50079;
+    bottom: 0;
+    color: #fff;
+    display: block;
+    font-size: 0.75em;
+    font-weight: 800;
+    line-height: 1.2;
+    padding: 10px 10px;
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 110px;
+}
+.promo--ranking--positions {
+    box-shadow: inset -1px 3px 13px -2px rgba(219,219,219,1);
+    width: 78%;
+    float: right;
+    margin: -10px;
+    padding: 30px;
+}
 
+.promo--ranking {
+    float: left;
+    position: relative;
+}
 
+.first-position-points {
+    position: absolute;
+    color: #fff;
+    font-size: 0.7em;
+    top: 5px;
+    right: 5px;
+    text-transform: uppercase;
+    z-index: 5;
+}
+    .first-position-points strong { font-size: 0.9rem;}
+
+.first-position-name {
+    background-color: #f50079;    
+    position: absolute;
+    color: #fff;
+    font-size: 0.7em;
+    font-weight: 600;
+    bottom: -20px;
+    height: 28px;
+    left: 0;
+    z-index: 5;
+    width: 110px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.other-positions {
+    margin: 0 -5px -7px 5px;
+    padding: 0;
+    width: 83%;
+}
+    .other-positions li {
+        list-style: none;
+        margin: 0 2px;
+        display: inline-block;
+        height: 65px;
+    }
+
+    .other-positions--infos {
+        background-color: #e8e8e8;
+        float: right;
+        padding: 6px;
+        height: 53px;
+        min-width: 53px;
+    }
+        .other-positions-number,
+        .other-positions-name,
+        .other-positions-points {
+            font-size: 0.8em;
+            display: block;
+            line-height: 1.5;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .other-positions-number sup {font-size: 0.6em;}
+        .other-positions-name { text-transform: capitalize; }
+        .other-positions-points {
+            font-size: 0.7em;
+            font-weight: 400;
+        }    
+        .other-positions--infos.selected {
+            background-color: #696969;
+            color: #e8e8e8;
+        }
+
+.promo--lastwinners--side-info {
+    float: left;
+}
+
+.promo--lastwinners-list {
+    border-left: 1px solid #e8e8e8;
+    background-color: #f1f1f1;
+    width: 82.5%;
+    float: right;
+    margin: -10px;
+    padding: 10px;
+}
+.promo--lastwinners-list ul {
+    margin: 0;
+    padding: 10px 30px 0;
+}
+
+.promo--lastwinners-item {
+    list-style: none;
+    margin: 5px 1.8% 5px;
+    display: inline-block;
+    height: 70px;
+    position: relative;
+}
+    
+    .promo--lastwinners--infos {
+        background-color: #bcbcbc;
+        float: left;
+        height: 38px;
+        min-width: 41px;
+        color: #fff;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .lastwinners-month,
+    .lastwinners-date {
+        font-size: 0.7em;
+        display: block;
+        line-height: 1.5;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    .lastwinners-name {
+        font-size: 0.8em;
+        font-weight: 800;
+        display: block;
+        margin-top: -6px;
+        text-align: center;
+    }
 
 /* =============================================================================
    Non-semantic helper classes
@@ -252,7 +398,7 @@ body{
    ========================================================================== */
  
 @media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  * { background: transparent !important; color: black !important; text-shadow: none !important; -webkit-filter:none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
   a, a:visited { color: #444 !important; text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
