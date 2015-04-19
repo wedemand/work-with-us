@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Marcus Feital - Front-End
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3

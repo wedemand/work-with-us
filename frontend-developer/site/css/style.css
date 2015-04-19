@@ -1,0 +1,694 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; }
+svg:not(:root) {
+    overflow: hidden;
+}
+figure { margin: 0; }
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+label { cursor: pointer; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { box-sizing: content-box; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+table { border-collapse: collapse; border-spacing: 0; }
+* { outline: none; }
+
+/* ===================================================
+    Initializr styles
+    http://verekia.com/initializr/responsive-template
+    Author: Jonathan Verrecchia
+   =================================================== */
+
+body{ 
+    font:16px/26px futura-pt, Arial, sans-serif; 
+     color: #696969;
+}
+
+#header-container {
+    margin: 27px 27px 10px;
+}
+
+.header--logo-container {
+	float: left;
+    margin-right: 1%;
+}
+    .header--logo-container img {
+        background: url('../img/sprite_wedemand.png') no-repeat -12px -53px;
+        width: 136px;
+        height: 42px;
+    }
+
+.header--icon--mobile-nav {
+    display: none;
+}
+.header--main--nav {
+    width: 100%;
+}
+
+.header--main--nav li {
+    float: left;
+    vertical-align: top;
+}
+
+    .header--main--nav li a {
+        color: #696969;
+        border-right: 1px solid #a9a9aa;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 0.7em;
+        height: 10px;
+        padding-right: 10px;
+        margin-left: 10px;  
+        -webkit-transition: color 0.5s;  
+        transition: color 0.5s;
+    }
+    .header--main--nav li a:hover { color: #a9a9aa; }
+
+.header--main--nav li:nth-of-type(4) a,
+.header--main--nav li:nth-of-type(5) a,
+.header--main--nav li:nth-of-type(6) a {
+    border-right: none;
+}
+
+.header--main--nav li:nth-of-type(5),
+.header--main--nav li:nth-of-type(6) {
+    float: right;
+}
+
+    .header--main--nav li:nth-of-type(5) a,
+    .header--main--nav li:nth-of-type(6) a {
+        color: #f50079;
+    }
+        .header--main--nav li:nth-of-type(5) a:hover,
+        .header--main--nav li:nth-of-type(6) a:hover {
+            text-decoration: underline
+        }
+
+.header--search {
+    width: 34%;
+    margin-top: -6px;
+    position: relative;
+    float: right;
+    margin-right: 0;
+}
+    .header--search::before {
+        content: url('../img/1x1.png');
+        background: url('../img/sprite_wedemand.png') no-repeat -43px -15px;
+        width: 14px;
+        height: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 8px;
+    }
+
+.header--search input {
+    font-size: 0.75em;
+    border-radius: 18px;
+    background-color: #ededed;
+    border: none;
+    font-weight: 800;
+    padding-left: 30px;
+    height: 38px;
+    width: 78%;
+}
+
+.header--search button {
+    color: #fff;
+    background-color: #f50079;
+    border-radius: 100%;
+    border: none;
+    font-weight: 800;  
+    width: 38px;
+    height: 38px;
+    text-transform: uppercase;
+    font-size: 0.8em; 
+}
+
+.main--content--wrapper {
+    max-width: 890px;
+    margin: 70px auto;
+}
+
+.promo--counter--text {
+    width: 55%;
+    float: left;
+}
+    .promo--counter--text h1 {
+        font-weight: 400;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    .promo--counter--text p {
+        font-weight: 400;
+        font-size: 0.9em;
+        line-height: 1.3;
+    }
+
+.promo--counter--widget {
+    background: transparent url('../img/counter--widget--bg.png') repeat-x;
+    box-shadow: -3px 3px 9px 1px rgba(0,0,0,0.1);
+    width: 40%;
+    float: left; 
+    margin: 3.9% 0 0 5%;
+    max-width: 370px;
+}
+
+.promo--counter--widget h3 {
+    font-size: 1.1em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 0px 10px 5px;
+    position: relative;
+}
+    .promo--counter--widget h3 strong { font-weight: 800; }
+    .promo--counter--widget h3:before {
+        content: url('../img/1x1.png');
+        background: url('../img/sprite_wedemand.png') no-repeat -9px -10px;
+        width: 23px;
+        height: 23px;
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        left: -8px;
+    }
+
+.promo--counter--elements {
+    text-align: center;
+    margin: 0 auto;
+}
+    
+    .counter--itens {
+        display: inline-block;
+        margin: 0 3.2%;
+        position: relative;
+    }
+
+    .counter--itens:after {
+        content: url('../img/1x1.png');
+        background: url('../img/sprite_wedemand.png') no-repeat -136px -9px;
+        width: 10px;
+        height: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 11px;
+        left: 64px;
+    }
+        .counter--itens:last-of-type:after {
+            display: none;
+        }
+
+    .counter--itens .counter--box {
+        background-color: #fff;
+        box-shadow: inset 0px 0px 14px -1px rgba(10,10,10,0.3);
+        color: #7f7f7f;        
+        font-weight: 600;
+        font-size: 1.6em;
+        width: 56px;
+        height: 48px;
+        vertical-align: middle;
+        display: table-cell;
+        -webkit-font-feature-settings: "kern" 1;
+        -moz-font-feature-settings: "kern" 1;
+        font-feature-settings: "kern" 1;
+    }
+        .counter--itens .counter--box:before {
+            content: url('../img/1x1.png');
+            border-left: 1px solid #eaeaea;
+            width: 1px;
+            height: 48px;
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            right: 27px;
+        }
+
+    .counter--itens .counter--text {
+        display: block;
+        font-size: 0.5rem;
+        font-weight: 800;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+.promo--ranking--container,
+.promo--lastwinners--container {
+    background-color: #f9f9f9;
+    min-height: 50px;
+    margin: 25px 0;
+    padding: 10px;
+}
+
+.promo--ranking--container {
+    background: transparent url('../img/ranking--side--bg.png') no-repeat;
+}
+
+.promo--ranking--container h2,
+.promo--lastwinners--container h2 {
+    font-size: 1.2em;
+    color: #f50079;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+    .promo--ranking--container h2,
+    .promo--lastwinners--container h2 strong { font-weight: 800; display: block;}
+
+.promo--ranking--side-info {
+    float: left;
+    min-height: 180px;
+    position: relative;
+}
+.promo--ranking--container a {
+    background: transparent url('../img/ranking--button--invite--bg.png') repeat-x;
+    bottom: 0;
+    color: #fff;
+    display: block;
+    font-size: 0.75em;
+    font-weight: 800;
+    line-height: 1.2;
+    padding: 7px 10px 10px;
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 110px;
+}
+.promo--ranking--positions {
+    box-shadow: inset -1px 3px 13px -2px rgba(219,219,219,1);
+    width: 78%;
+    float: right;
+    margin: -10px;
+    padding: 30px;
+}
+
+.promo--ranking {
+    float: left;
+    position: relative;
+}
+
+.first-position-number {
+    background: url('../img/sprite_wedemand.png') no-repeat -79px -4px;
+    width: 41px;
+    height: 41px;
+    position: absolute;
+    color: #fff;
+    font-size: 1.1em;
+    top: 0px;
+    left: 0px;
+    text-transform: uppercase;
+    z-index: 5;
+    padding-left: 3px;
+}
+.first-position-number sup {
+    font-size: 0.5rem;
+    top: -0.9em;
+}
+.first-position-points {
+    position: absolute;
+    color: #fff;
+    font-size: 0.7em;
+    top: 5px;
+    right: 5px;
+    text-transform: uppercase;
+    z-index: 5;
+}
+    .first-position-points strong { font-size: 0.9rem;}
+
+.first-position-name {
+    background-color: #f50079;    
+    position: absolute;
+    color: #fff;
+    font-size: 0.7em;
+    font-weight: 600;
+    bottom: -20px;
+    height: 28px;
+    left: 0;
+    z-index: 5;
+    width: 110px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.other-positions {
+    margin: 0 -5px -7px 5px;
+    padding: 0;
+    width: 83%;
+}
+    .other-positions li {
+        list-style: none;
+        margin: 0 2px;
+        display: inline-block;
+        height: 65px;
+    }
+
+    .other-positions--infos {
+        background-color: #e8e8e8;
+        float: right;
+        padding: 6px;
+        height: 53px;
+        min-width: 53px;
+    }
+        .other-positions-number,
+        .other-positions-name,
+        .other-positions-points {
+            font-size: 0.8em;
+            display: block;
+            line-height: 1.5;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .other-positions-number sup {font-size: 0.6em;}
+        .other-positions-name { text-transform: capitalize; }
+        .other-positions-points {
+            font-size: 0.7em;
+            font-weight: 400;
+        }    
+        .other-positions--infos.selected {
+            background-color: #696969;
+            color: #e8e8e8;
+        }
+
+.promo--lastwinners--side-info {
+    float: left;
+}
+
+.promo--lastwinners-list {
+    border-left: 1px solid #e8e8e8;
+    background-color: #f1f1f1;
+    width: 82.5%;
+    float: right;
+    margin: -10px;
+    padding: 10px;
+}
+.promo--lastwinners-list ul {
+    margin: 0;
+    padding: 10px 30px 0;
+}
+
+.promo--lastwinners-item {
+    list-style: none;
+    margin: 5px 1.8% 5px;
+    display: inline-block;
+    height: 70px;
+    position: relative;
+}
+    
+    .promo--lastwinners--infos {
+        background-color: #bcbcbc;
+        float: left;
+        height: 38px;
+        min-width: 41px;
+        color: #fff;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .lastwinners-month,
+    .lastwinners-date {
+        font-size: 0.7em;
+        display: block;
+        line-height: 1.5;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    .lastwinners-name {
+        font-size: 0.8em;
+        font-weight: 800;
+        display: block;
+        margin-top: -6px;
+        text-align: center;
+    }
+
+
+.ie-oldie .msg--old-browser {
+  color: #fff;
+  background-color: #f50079;
+  text-align: center;
+  top: 0;
+  margin-top: -16px;
+  line-height: 2;
+}
+
+/* ==|== media queries ====================================================== */
+
+
+@media only screen and (max-width: 1140px) {
+
+    .header--main--nav li a {
+      padding-right: 5px;
+      margin-left: 5px;
+    }
+    .header--search {
+      width: 20%;  
+    }
+        .header--search input {
+          width: 52%;
+        }
+    
+    .promo--counter--container,
+    .promo--ranking--container,
+    .promo--lastwinners--container {
+        margin: 25px 2%;
+    }
+    .other-positions {
+        margin-right: -10px;
+    }   
+    .promo--ranking--container {
+        background: none;
+        background-color: #f9f9f9;
+    }
+    .promo--ranking--side-info {
+      min-height: 250px;
+    }
+    .promo--ranking--positions {
+      width: 77%;
+    }
+}
+
+
+@media only screen and (max-width: 860px) {
+
+    .header--main--nav {
+      background-color: #ededed;
+      width: 140px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      z-index: 10;
+      bottom: 0;
+      margin-left: -175px;
+      padding-top: 80px;
+      -webkit-transition: margin 1s;
+      transition: margin 1s;
+    }  
+     .header--logo-container {
+      margin-right: 0%;
+      margin-left: 5%;
+    }   
+    .header--icon--mobile-nav {
+        content: url('../img/1x1.png');
+        display: block;
+        background: url('../img/sprite_wedemand.png') no-repeat -162px -7px;
+        position: absolute;
+        width: 20px;
+        height: 29px;
+        left: 3%;
+        z-index: 20;
+        cursor: pointer;
+        -webkit-transition: background 2s, left 2s;
+        transition: left 0.5s;
+    }
+        .header--icon--mobile-nav.active {
+            background: url('../img/sprite_wedemand.png') no-repeat -162px -56px;
+            left: 140px;
+            -webkit-transition: left 0.5s;
+            transition: left 1.6s;
+        }
+    .header--main--nav li {
+        float: none;
+        margin-bottom: 10px;
+    }
+        .header--main--nav li a {
+            border-right: none;
+            padding-bottom: 10px;
+        }
+            .header--main--nav li:nth-of-type(5), 
+            .header--main--nav li:nth-of-type(6) {
+                float: none;
+            }
+
+    .header--search {
+      margin-right: -0.5%;
+      width: 61%;
+      margin-top: -10px;
+    }
+    .promo--counter--text {
+      width: 90%;
+      margin: 0 auto;
+      float: none;
+    }
+    .promo--counter--widget {
+      width: 80%;
+      margin: 3.9% auto 0;
+      float: none;
+    }
+    .promo--ranking--side-info {
+      min-height: 80px;
+      width: 100%;
+    }
+        .promo--ranking--container h2{
+            float: left;
+        }
+        .promo--ranking--container a {
+            position: relative;
+            float: right;
+        }
+    .promo--ranking--positions {
+      width: 92%;
+    }
+    .other-positions {
+        width: 77%;
+    }
+    .promo--lastwinners--container h2 strong {
+        display: inline;
+    }
+    .promo--lastwinners-list {
+        border-left: none;
+        width: 100%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 540px) {
+    
+    .header--search {
+        position: absolute;
+        right: 0px;
+        width: 42%;
+        margin-right: 0;
+    }
+        .header--search input {
+          width: 40%;
+        }
+    .main--content--wrapper {
+      margin: 0 auto;
+    }
+    
+    .promo--counter--widget {
+      width: 98%;
+    }
+    
+    .counter--itens {
+      display: inline-block;
+      margin: 0 0.5%;
+      position: relative;
+    }
+    
+    .counter--itens:after {
+      display: none;
+    }
+    
+    .promo--ranking {
+        float: none;
+        width: 110px;
+        margin: 0 auto;
+    }
+    .other-positions {
+        width: 135px;
+        margin: 30px auto 0;
+    }
+    .promo--lastwinners-list ul {
+      text-align: center;
+    }
+}
+
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; -webkit-filter:none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
