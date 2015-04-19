@@ -544,7 +544,7 @@ body{
     }
         .header--icon--mobile-nav.active {
             background: url('../img/sprite_wedemand.png') no-repeat -162px -56px;
-            left: 35%;
+            left: 140px;
             -webkit-transition: left 0.5s;
             transition: left 1.6s;
         }
@@ -591,7 +591,7 @@ body{
       width: 92%;
     }
     .other-positions {
-        width: 59%;
+        width: 77%;
     }
     .promo--lastwinners--container h2 strong {
         display: inline;
@@ -632,7 +632,19 @@ body{
     .counter--itens:after {
       display: none;
     }
-
+    
+    .promo--ranking {
+        float: none;
+        width: 110px;
+        margin: 0 auto;
+    }
+    .other-positions {
+        width: 135px;
+        margin: 30px auto 0;
+    }
+    .promo--lastwinners-list ul {
+      text-align: center;
+    }
 }
 
 
