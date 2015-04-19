@@ -63,6 +63,12 @@ body{
     margin: 27px;
 }
 
+.header--main--nav li.header--logo-container img {
+	background: url('../img/sprite_wedemand.png') no-repeat -12px -53px;
+	width: 136px;
+	height: 42px;
+}
+
 .header--main--nav {
     width: 100%;
 }
@@ -81,8 +87,11 @@ body{
         font-size: 0.7em;
         height: 10px;
         padding-right: 10px;
-        margin-left: 5px;       
+        margin-left: 5px;  
+        -webkit-transition: color 0.5s;  
+        transition: color 0.5s;
     }
+    .header--main--nav li a:hover { color: #a9a9aa; }
 
 .header--main--nav li.header--logo-container a,
 .header--main--nav li:nth-of-type(5) a,
@@ -102,11 +111,16 @@ body{
     .header--main--nav li:nth-of-type(7) a {
         color: #f50079;
     }
+        .header--main--nav li:nth-of-type(6) a:hover,
+        .header--main--nav li:nth-of-type(7) a:hover {
+            text-decoration: underline
+        }
 
 .header--search {
     width: 30%;
     margin-top: -7px;
     margin-right: 5%;
+    position: relative;
 }
 .header--search input {
     font-size: 0.75em;
@@ -117,6 +131,17 @@ body{
     padding-left: 30px;
     height: 38px;
     width: 80%;
+}
+
+.header--search::before {
+    content: url('../img/1x1.png');
+	background: url('../img/sprite_wedemand.png') no-repeat -43px -15px;
+	width: 14px;
+	height: 18px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
 }
 
 .header--search button {
@@ -154,11 +179,11 @@ body{
     }
 
 .promo--counter--widget {
-    background-color: #f50079;
+    background: transparent url('../img/counter--widget--bg.png') repeat-x;
+    box-shadow: -3px 3px 9px 1px rgba(0,0,0,0.1);
     width: 40%;
     float: left; 
-    margin: 5% 0 0 5%;
-    min-height: 50px;
+    margin: 3.9% 0 0 5%;
 }
 
 .promo--counter--widget h3 {
@@ -167,8 +192,76 @@ body{
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
+    margin: 10px -15px 10px 15px;
+    position: relative;
 }
     .promo--counter--widget h3 strong { font-weight: 800; }
+    .promo--counter--widget h3:before {
+        content: url('../img/1x1.png');
+        background: url('../img/sprite_wedemand.png') no-repeat -9px -10px;
+        width: 23px;
+        height: 23px;
+        display: inline-block;
+        position: absolute;
+        top: 2px;
+        left: 15px;
+    }
+
+.promo--counter--elements {
+    text-align: center;
+    margin: 0 auto;
+}
+    
+    .counter--itens {
+        display: inline-block;
+        margin: 0 3.5%;
+        position: relative;
+    }
+
+    .counter--itens:after {
+        content: url('../img/1x1.png');
+        background: url('../img/sprite_wedemand.png') no-repeat -136px -9px;
+        width: 10px;
+        height: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 11px;
+        left: 65px;
+    }
+        .counter--itens:last-of-type:after {
+            display: none;
+        }
+    .counter--itens .counter--box {
+        background-color: #fff;
+        box-shadow: inset 0px 0px 14px -1px rgba(10,10,10,0.3);
+        color: #7f7f7f;        
+        font-weight: 600;
+        font-size: 1.6em;
+        width: 56px;
+        height: 48px;
+        vertical-align: middle;
+        display: table-cell;
+        -webkit-font-feature-settings: "kern" 1;
+        -moz-font-feature-settings: "kern" 1;
+        font-feature-settings: "kern" 1;
+    }
+        .counter--itens .counter--box:before {
+            content: url('../img/1x1.png');
+            border-left: 1px solid #eaeaea;
+            width: 1px;
+            height: 48px;
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            right: 27px;
+        }
+    .counter--itens .counter--text {
+        display: block;
+        font-size: 0.5rem;
+        font-weight: 800;
+        color: #fff;
+        text-transform: uppercase;
+    }
 
 .promo--ranking--container,
 .promo--lastwinners--container {
@@ -176,6 +269,10 @@ body{
     min-height: 50px;
     margin: 25px 0;
     padding: 10px;
+}
+
+.promo--ranking--container {
+    background: transparent url('../img/ranking--side--bg.png') no-repeat;
 }
 
 .promo--ranking--container h2,
@@ -196,14 +293,14 @@ body{
     position: relative;
 }
 .promo--ranking--container a {
-    background-color: #f50079;
+    background: transparent url('../img/ranking--button--invite--bg.png') repeat-x;
     bottom: 0;
     color: #fff;
     display: block;
     font-size: 0.75em;
     font-weight: 800;
     line-height: 1.2;
-    padding: 10px 10px;
+    padding: 7px 10px 10px;
     position: absolute;
     text-decoration: none;
     text-align: center;
@@ -223,6 +320,23 @@ body{
     position: relative;
 }
 
+.first-position-number {
+    background: url('../img/sprite_wedemand.png') no-repeat -79px -4px;
+    width: 41px;
+    height: 41px;
+    position: absolute;
+    color: #fff;
+    font-size: 1.1em;
+    top: 0px;
+    left: 0px;
+    text-transform: uppercase;
+    z-index: 5;
+    padding-left: 3px;
+}
+.first-position-number sup {
+    font-size: 0.5rem;
+    top: -0.9em;
+}
 .first-position-points {
     position: absolute;
     color: #fff;
@@ -340,14 +454,11 @@ body{
         text-align: center;
     }
 
+
 /* =============================================================================
    Non-semantic helper classes
    Please define your styles before this section.
    ========================================================================== */
-
-/* For image replacement *
-.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
-.ir br { display: none; }
 
 /* Hide for both screenreaders and browsers:
    css-discuss.incutio.com/wiki/Screenreader_Visibility */
