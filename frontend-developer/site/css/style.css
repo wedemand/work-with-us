@@ -539,7 +539,15 @@ body{
         left: 3%;
         z-index: 20;
         cursor: pointer;
+        -webkit-transition: background 2s, left 2s;
+        transition: left 0.5s;
     }
+        .header--icon--mobile-nav.active {
+            background: url('../img/sprite_wedemand.png') no-repeat -162px -56px;
+            left: 35%;
+            -webkit-transition: left 0.5s;
+            transition: left 1.6s;
+        }
     .header--main--nav li {
         float: none;
         margin-bottom: 10px;
