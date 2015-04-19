@@ -60,7 +60,7 @@ body{
 }
 
 #header-container {
-    margin: 27px;
+    margin: 27px 27px 10px;
 }
 
 .header--logo-container {
@@ -73,6 +73,9 @@ body{
         height: 42px;
     }
 
+.header--icon--mobile-nav {
+    display: none;
+}
 .header--main--nav {
     width: 100%;
 }
@@ -186,6 +189,7 @@ body{
     width: 40%;
     float: left; 
     margin: 3.9% 0 0 5%;
+    max-width: 370px;
 }
 
 .promo--counter--widget h3 {
@@ -194,7 +198,7 @@ body{
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
-    margin: 10px -15px 10px 15px;
+    margin: 10px 0px 10px 5px;
     position: relative;
 }
     .promo--counter--widget h3 strong { font-weight: 800; }
@@ -204,9 +208,9 @@ body{
         width: 23px;
         height: 23px;
         display: inline-block;
-        position: absolute;
+        position: relative;
         top: 2px;
-        left: 15px;
+        left: -8px;
     }
 
 .promo--counter--elements {
@@ -216,7 +220,7 @@ body{
     
     .counter--itens {
         display: inline-block;
-        margin: 0 3.5%;
+        margin: 0 3.2%;
         position: relative;
     }
 
@@ -228,7 +232,7 @@ body{
         display: inline-block;
         position: absolute;
         top: 11px;
-        left: 65px;
+        left: 64px;
     }
         .counter--itens:last-of-type:after {
             display: none;
@@ -459,6 +463,172 @@ body{
     }
 
 
+.ie-oldie .msg--old-browser {
+  color: #fff;
+  background-color: #f50079;
+  text-align: center;
+  top: 0;
+  margin-top: -16px;
+  line-height: 2;
+}
+
+/* ==|== media queries ====================================================== */
+
+
+@media only screen and (max-width: 1140px) {
+
+    .header--main--nav li a {
+      padding-right: 5px;
+      margin-left: 0px;
+    }
+    .header--search {
+      margin-right: 12.5%;
+      width: 24%;  
+    }
+        .header--search input {
+          width: 56%;
+        }
+    
+    .promo--counter--container,
+    .promo--ranking--container,
+    .promo--lastwinners--container {
+        margin: 25px 2%;
+    }
+    .other-positions {
+        margin-right: -10px;
+    }   
+    .promo--ranking--container {
+        background: none;
+        background-color: #f9f9f9;
+    }
+    .promo--ranking--side-info {
+      min-height: 250px;
+    }
+    .promo--ranking--positions {
+      width: 77%;
+    }
+}
+
+
+@media only screen and (max-width: 860px) {
+
+    .header--main--nav {
+      background-color: #ededed;
+      width: 140px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      z-index: 10;
+      bottom: 0;
+      margin-left: -175px;
+      padding-top: 80px;
+      -webkit-transition: margin 1s;
+      transition: margin 1s;
+    }  
+     .header--logo-container {
+      margin-right: 0%;
+      margin-left: 5%;
+    }   
+    .header--icon--mobile-nav {
+        content: url('../img/1x1.png');
+        display: block;
+        background: url('../img/sprite_wedemand.png') no-repeat -162px -7px;
+        position: absolute;
+        width: 20px;
+        height: 29px;
+        left: 3%;
+        z-index: 20;
+        cursor: pointer;
+    }
+    .header--main--nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+        .header--main--nav li a {
+            border-right: none;
+            padding-bottom: 10px;
+        }
+            .header--main--nav li:nth-of-type(5), 
+            .header--main--nav li:nth-of-type(6) {
+                float: none;
+            }
+
+    .header--search {
+      margin-right: -0.5%;
+      width: 61%;
+      margin-top: -10px;
+    }
+    .promo--counter--text {
+      width: 90%;
+      margin: 0 auto;
+      float: none;
+    }
+    .promo--counter--widget {
+      width: 80%;
+      margin: 3.9% auto 0;
+      float: none;
+    }
+    .promo--ranking--side-info {
+      min-height: 80px;
+      width: 100%;
+    }
+        .promo--ranking--container h2{
+            float: left;
+        }
+        .promo--ranking--container a {
+            position: relative;
+            float: right;
+        }
+    .promo--ranking--positions {
+      width: 92%;
+    }
+    .other-positions {
+        width: 59%;
+    }
+    .promo--lastwinners--container h2 strong {
+        display: inline;
+    }
+    .promo--lastwinners-list {
+        border-left: none;
+        width: 100%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 540px) {
+    
+    .header--search {
+        position: absolute;
+        right: 0px;
+        width: 42%;
+        margin-right: 0;
+    }
+        .header--search input {
+          width: 40%;
+        }
+    .main--content--wrapper {
+      margin: 0 auto;
+    }
+    
+    .promo--counter--widget {
+      width: 98%;
+    }
+    
+    .counter--itens {
+      display: inline-block;
+      margin: 0 0.5%;
+      position: relative;
+    }
+    
+    .counter--itens:after {
+      display: none;
+    }
+
+}
+
+
 /* =============================================================================
    Non-semantic helper classes
    Please define your styles before this section.
@@ -482,29 +652,6 @@ body{
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-
-
-/* ==|== media queries ====================================================== */
-
-
-@media only screen and (min-width: 1140px) {
-
-    
-}
-
-
-@media only screen and (min-width: 860px) {
-
-
-
-}
-
-
-@media only screen and (min-width: 540px) {
-
-
-
-}
 
 
 /* =============================================================================

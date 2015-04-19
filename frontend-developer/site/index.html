@@ -31,8 +31,14 @@
     
 </head>
 <body>
-	<div id="header-container">
-		<header class="wrapper clearfix">
+    <!--[if lt IE 9]>
+    <div class="msg--old-browser">
+        <p>Your browser is too old, please upgrade it!</p>
+    </div>
+    <![endif]-->  
+	<header id="header-container">
+		<div class="wrapper clearfix">
+            <i class="header--icon--mobile-nav"></i>
             <div class="header--logo-container">
                 <a href="http://www.wedemand.com">
                     <img src="img/1x1.png" alt="Logo WeDemand" width="136" height="42"/>
@@ -76,8 +82,8 @@
                 <input type="search" autocomplete="off" placeholder="Search artists and demand them in your city" />
                 <button>go</button>
             </div>             
-		</header>
-	</div>
+		</div>
+	</header>
 	<section id="main-container">
 		<div id="main" class="wrapper clearfix">
             <header class="promo--img--banner">
